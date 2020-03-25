@@ -39,9 +39,23 @@ Airplane.prototype.land = function () {
         + It should return a string with `name` and `age`. Example: "Mary, 50"
 */
 
-function Person() {
-
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.stomach =[];
 }
+Person.prototype.eat = function(edible){
+  if (this.stomach.length < 10) {
+    this.stomach.push(edible);
+  }else{
+    return 'No more food please';
+  }console.log(this.stomach);
+};
+Person.prototype.poop = function(){
+  return (this.stomach = []);
+}
+
+
 
 /*
   TASK 2
@@ -72,14 +86,14 @@ function Baby() {
 
 }
 
-/* 
+/*
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1.
+  2.
+  3.
+  4.
 */
 
 
